@@ -1,0 +1,25 @@
+---
+title: "DDP_First_Map"
+author: "Gregory Roberts"
+date: "January 8, 2017"
+output: html_document
+---
+
+```{r}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(leaflet)
+
+archIcon <- makeIcon(iconUrl = "./icons/st-louis-gateway-arch.jpg", iconWidth = 35, iconHeight = 35)
+theatreIcon <- makeIcon(iconUrl = "./icons/mask_icon.jpg", iconWidth = 35, iconHeight = 35)
+stadiumIcon <- makeIcon(iconUrl = "./icons/busch_stadium.jpg", iconWidth = 35, iconHeight = 35)
+gardenIcon <- makeIcon(iconUrl = "./icons/city_garden.jpg", iconWidth = 35, iconHeight = 35)
+
+my_map <- leaflet() %>%
+  addTiles() %>%
+  addMarkers(lat=38.6232174, lng=-90.1887872, popup="The Gateway Arch", icon = archIcon) %>%
+  addMarkers(lat=38.639247,  lng =-90.232281, popup="Fox Theatre", icon = theatreIcon) %>%
+  addMarkers(lat=38.623150,  lng=-90.192821, popup="Busch Stadium", icon = stadiumIcon) %>%
+  addMarkers(lat=38.626930,  lng=-90.193712, popup="City Garden", icon =gardenIcon)
+my_map
+```
