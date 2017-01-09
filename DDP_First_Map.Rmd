@@ -6,8 +6,6 @@ output: html_document
 ---
 
 ```{r}
-knitr::opts_chunk$set(echo = TRUE)
-
 library(leaflet)
 
 archIcon <- makeIcon(iconUrl = "./icons/st-louis-gateway-arch.jpg", iconWidth = 35, iconHeight = 35)
@@ -23,3 +21,8 @@ my_map <- leaflet() %>%
   addMarkers(lat=38.626930,  lng=-90.193712, popup="City Garden", icon =gardenIcon)
 my_map
 ```
+<br>
+<br>
+<br>
+<br>
+<br>
